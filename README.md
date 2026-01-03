@@ -419,7 +419,7 @@ This package is licensed under the [MIT License](LICENSE).
 - **Email**: limonhassan606@gmail.com
 - **Portfolio**: [https://limon.qzz.io](https://limon.qzz.io)
 
-## 🙏 Acknowledgments
+## 🙏 Acknowledgments 
 
 - Laravel Framework
 - All social media platform APIs
