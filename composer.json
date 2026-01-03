@@ -1,0 +1,56 @@
+{
+    "name": "limonhasan/social-autoposter",
+    "description": "Laravel social media auto post package - Complete solution for posting to 8 major social media platforms with advanced scheduling and analytics",
+    "type": "library",
+    "version": "1.0.0",
+    "require": {
+        "laravel/framework": "^12.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.3",
+        "orchestra/testbench": "^10.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LimonHasan\\SocialAutoPoster\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LimonHasan\\SocialAutoPoster\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Limon Hasan",
+            "email": "limonhassan606@gmail.com",
+            "homepage": "https://limon.qzz.io"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LimonHasan\\SocialAutoPoster\\SocialShareServiceProvider"
+            ],
+            "aliases": {
+                "FaceBook": "LimonHasan\\SocialAutoPoster\\Facades\\FaceBook",
+                "Telegram": "LimonHasan\\SocialAutoPoster\\Facades\\Telegram",
+                "Twitter": "LimonHasan\\SocialAutoPoster\\Facades\\Twitter",
+                "LinkedIn": "LimonHasan\\SocialAutoPoster\\Facades\\LinkedIn",
+                "Instagram": "LimonHasan\\SocialAutoPoster\\Facades\\Instagram",
+                "TikTok": "LimonHasan\\SocialAutoPoster\\Facades\\TikTok",
+                "YouTube": "LimonHasan\\SocialAutoPoster\\Facades\\YouTube",
+                "Pinterest": "LimonHasan\\SocialAutoPoster\\Facades\\Pinterest",
+                "SocialMedia": "LimonHasan\\SocialAutoPoster\\Facades\\SocialMedia"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "test": "phpunit"
+    }
+}
