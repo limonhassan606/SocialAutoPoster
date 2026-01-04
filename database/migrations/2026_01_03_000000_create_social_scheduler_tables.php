@@ -4,8 +4,14 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
-    public function up(): void
+class CreateSocialSchedulerTables extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
     {
         Schema::create('scheduled_posts', function (Blueprint $table) {
             $table->id();
@@ -28,7 +34,7 @@ return new class extends Migration {
 
         Schema::create('recurring_posts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('scheduled_post_id')->constrained('scheduled_posts')->onDelete('cascade');
+            $table->unsignedBigInteger('scheduled_post_id');
             $table->enum('type', ['daily', 'weekly', 'monthly']);
             $table->string('time');
             $table->timestamp('until')->nullable();
@@ -37,12 +43,22 @@ return new class extends Migration {
             $table->timestamp('next_run_at')->nullable();
             $table->boolean('is_active')->default(true);
             $table->timestamps();
+
+            $table->foreign('scheduled_post_id')
+                ->references('id')
+                ->on('scheduled_posts')
+                ->onDelete('cascade');
         });
     }
 
-    public function down(): void
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
     {
         Schema::dropIfExists('recurring_posts');
         Schema::dropIfExists('scheduled_posts');
     }
-};
+}

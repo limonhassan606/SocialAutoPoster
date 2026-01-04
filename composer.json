@@ -2,13 +2,16 @@
     "name": "limonhasan/social-autoposter",
     "description": "Laravel social media auto post package - Complete solution for posting to 8 major social media platforms with advanced scheduling and analytics",
     "type": "library",
-    "version": "1.0.0",
+    "version": "1.5.0",
     "require": {
-        "laravel/framework": "^12.0"
+        "php": "^7.4|^8.0",
+        "laravel/framework": "^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
+        "ext-json": "*",
+        "ext-curl": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^11.3",
-        "orchestra/testbench": "^10.0"
+        "phpunit/phpunit": "^9.0|^10.0|^11.0",
+        "orchestra/testbench": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0"
     },
     "license": "MIT",
     "autoload": {

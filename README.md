@@ -39,9 +39,9 @@ A comprehensive Laravel package for automatic social media posting across **8 ma
 
 ### Requirements
 
-- PHP 8.1 or higher
-- Laravel 12.0 or higher
-- Composer
+- **PHP**: 7.4, 8.0, 8.1, 8.2, or 8.3
+- **Laravel**: 7.x, 8.x, 9.x, 10.x, 11.x, or 12.x
+- **Composer**
 
 ### Install via Composer
 
